@@ -1,17 +1,19 @@
 import tweepy
+from os import environ
 import time
 
-consumer_key = 'Fls5Egf4Y8AnbjVnPtsUfdhWv'
-consumer_secret = '2mJdCvgfYosMnqWYSakzL8Tf5bltz21ejr9Kh6uqRRflTCog3C'
-access_token = '1394535816915943427-6pRvdE0VP7gaUGV5vKmRhatrVvJAAH'
-access_token_secret = 'ElL7NEIOFz7XjJXM8iXKKXBGHeI4K9JNJjCeULlD1CTnw'
+CONSUMER_KEY = environ['CONSUMER_KEY']
+CONSUMER_SECRET = environ['CONSUMER_SECRET']
+ACCESS_KEY = environ['ACCESS_KEY']
+ACCESS_SECRET = environ['ACCESS_SECRET']
+
 
 # To get above keys apply for twitter developer account and make an app.
 
 def OAuth():
     try:
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-        auth.set_access_token(access_token, access_token_secret)
+        auth = tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET )
+        auth.set_access_token(ACCESS_KEY,ACCESS_SECRET )
         return auth
     except Exception as e:
         return e
@@ -31,3 +33,4 @@ while True:
         print(e)
         time.sleep(10)
         continue
+
