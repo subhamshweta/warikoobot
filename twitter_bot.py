@@ -19,7 +19,6 @@ def OAuth():
 
 auth = OAuth()
 api = tweepy.API(auth + mention_timeline)
-mention in reversed(mention):
 
 while True:
     user = api.get_user('subham_shweta'+ mention.user.screen_name) # Change 'subham_shweta' to any other twitter username
