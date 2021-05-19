@@ -30,6 +30,5 @@ while True:
 
     except Exception as e:
         print(e)
-        print api, @subham_shweta
         time.sleep(10)
         continue
