@@ -21,7 +21,7 @@ auth = OAuth()
 api = tweepy.API(auth)
 
 while True:
-    user = api.get_user('balveersinghyt')  # Change 'subham_shweta' to any other twitter username
+    user = api.get_user('subham_shweta')  # Change 'subham_shweta' to any other twitter username
     copy = user.status.text
     try:
         api.update_status(copy)         # Post copied tweet
