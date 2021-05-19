@@ -25,7 +25,7 @@ while True:
     copy = user.status.text
     try:
         api.update_status(copy)         # Post copied tweet
-        print('Paste')
+        print('Paste' + @subham_shweta)
         time.sleep(5)
 
     except Exception as e:
