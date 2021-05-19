@@ -30,6 +30,5 @@ while True:
 
     except Exception as e:
         print(e)
-        print(mention.id) + "_" + mention.full_text)
         time.sleep(10)
         continue
