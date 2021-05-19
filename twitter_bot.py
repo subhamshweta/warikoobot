@@ -18,10 +18,10 @@ def OAuth():
         return e
 
 auth = OAuth()
-api = tweepy.API(auth + mention_timeline)
+api = tweepy.API(auth)
 
 while True:
-    user = api.get_user('subham_shweta'+ mention.user.screen_name) # Change 'subham_shweta' to any other twitter username
+    user = api.get_user('subham_shweta') # Change 'subham_shweta' to any other twitter username
     copy = user.status.text
     try:
         api.update_status(copy)         # Post copied tweet
