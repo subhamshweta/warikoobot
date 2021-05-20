@@ -28,10 +28,10 @@ while True:
     try:
         api.update_status('"%s" - @%s'%(copy,user_name))         # Post copied tweet
         print('Pasted')
-        time.sleep(5)
+        time.sleep(30)
 
     except Exception as e:
         print(e)
-        time.sleep(10)
+        time.sleep(30)
         continue
 
