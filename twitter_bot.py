@@ -20,7 +20,7 @@ def OAuth():
 auth = OAuth()
 api = tweepy.API(auth)
 
-user_name = 'subham_shweta' # Change 'subham_shweta' to any other twitter username
+user_name = 'FitFounder' # Change 'FitFounder' to any other twitter username
 
 while True:
     user = api.get_user(user_name)  
