@@ -26,7 +26,7 @@ while True:
     user = api.get_user(user_name)  
     copy = user.status.text
     try:
-        api.update_status('"%s" ~ @%s'%(copy,user_name))         # Post copied tweet
+        api.update_status('"%s" - @%s'%(copy,user_name))         # Post copied tweet
         print('Pasted')
         time.sleep(5)
 
