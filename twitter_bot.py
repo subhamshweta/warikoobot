@@ -26,10 +26,10 @@ user_name = 'trendimemes' # Change 'FitFounder' to any other twitter username
 
 while True:
     user = api.get_user(user_name)  
-    copy = user.status.full_text
+    copy = user.status.text
     try:
         api.update_status('"%s" - @%s' %(copy,user_name))         # Post copied tweet
-        print('Pasted')
+        print(str('Pasted'.full_text)
         time.sleep(60)
 
     except Exception as e:
