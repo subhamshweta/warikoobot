@@ -27,7 +27,6 @@ while True:
     user = api.get_user(user_name)  
     copy = user.status.text
     try:
-        for line in tweettext[0:200]: #Will only write first 200 lines
         api.update_status('"%s" - @%s' %(copy,user_name))         # Post copied tweet
         print('Pasted')
         time.sleep(60)
