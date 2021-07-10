@@ -20,19 +20,20 @@ def OAuth():
 auth = OAuth()
 api = tweepy.API(auth)
 
-user_name = 'FitFounder' # Change 'FitFounder' to any other twitter username
+user_name = 'trendimemes' # Change 'trendimemes' to any other twitter username
 
 
 while True:
     user = api.get_user(user_name)  
     copy = user.status.text
     try:
+        for line in tweettext[0:200]: #Will only write first 200 lines
         api.update_status('"%s" - @%s' %(copy,user_name))         # Post copied tweet
         print('Pasted')
-        time.sleep(5400)
+        time.sleep(60)
 
     except Exception as e:
         print(e)
-        time.sleep(5400)
+        time.sleep(60)
         continue
 
