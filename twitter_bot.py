@@ -28,9 +28,10 @@ while True:
     try:
         for info in tweets[:1]:
             newtweet = info.full_text 
-        
             print("New Tweet " + newtweet)
-            api.update_status(newtweet) 
+            
+            #api.update_status(newtweet)
+            api.update_status('"%s" - @%s' %(newtweet,userID))
             time.sleep(60)
 
     except Exception as e:
