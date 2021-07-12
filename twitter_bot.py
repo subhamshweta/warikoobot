@@ -20,16 +20,18 @@ def OAuth():
 auth = OAuth()
 api = tweepy.API(auth)
 
-user_name = 'trendimemes' # Change 'trendimemes' to any other twitter username
-
+userID = 'trendimemes' # Change 'trendimemes' to any other twitter username
 
 while True:
-    user = api.get_user(user_name)  
-    copy = user.status.text
+    tweets = api.user_timeline(screen_name=userID, count=10, include_rts = False, tweet_mode = 'extended')
+    
     try:
-        api.update_status('"%s" - @%s' %(copy,user_name))         # Post copied tweet
-        print('Pasted')
-        time.sleep(60)
+        for info in tweets[:1]:
+            newtweet = info.full_text 
+        
+            print("New Tweet " + newtweet)
+            api.update_status(newtweet) 
+            time.sleep(60)
 
     except Exception as e:
         print(e)
