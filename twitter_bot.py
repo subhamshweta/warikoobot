@@ -23,7 +23,7 @@ api = tweepy.API(auth)
 userID = 'FitFounder' # Change 'FitFounder' to any other twitter username
 
 while True:
-    tweets = api.user_timeline(screen_name=userID, count=10, include_rts = False, tweet_mode = 'extended')
+    tweets = api.user_timeline(screen_name=userID, count=10, include_rts = False, exclude_replies = True, tweet_mode = 'extended')
     
     try:
         for info in tweets[:1]:
