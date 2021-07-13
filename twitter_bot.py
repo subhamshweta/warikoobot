@@ -20,7 +20,7 @@ def OAuth():
 auth = OAuth()
 api = tweepy.API(auth)
 
-userID = 'trendimemes' # Change 'trendimemes' to any other twitter username
+userID = 'FitFounder' # Change 'FitFounder' to any other twitter username
 
 while True:
     tweets = api.user_timeline(screen_name=userID, count=10, include_rts = False, tweet_mode = 'extended')
@@ -32,14 +32,14 @@ while True:
             print("Length of tweet is " + str(len(newtweet)))
             print("\n")
             #api.update_status(newtweet)
-            time.sleep(20)
+            time.sleep(3200)
         
         if len(newtweet) < 260:
             api.update_status('"%s" - @%s' %(newtweet,userID))
             # api.update_status(newtweet)
             print("Tweeted")
             print("\n")
-            time.sleep(30)
+            time.sleep(1800)
     
         else:
             print("Length of Tweet is more than 260 characters")
@@ -47,4 +47,4 @@ while True:
 
     except Exception as e:
         print(e)
-        time.sleep(60)
+        time.sleep(1800)
