@@ -29,13 +29,22 @@ while True:
         for info in tweets[:1]:
             newtweet = info.full_text 
             print("New Tweet " + newtweet)
-            
+            print("Length of tweet is " + str(len(newtweet)))
+            print("\n")
             #api.update_status(newtweet)
+            time.sleep(20)
+        
+        if len(newtweet) < 260:
             api.update_status('"%s" - @%s' %(newtweet,userID))
-            time.sleep(60)
+            # api.update_status(newtweet)
+            print("Tweeted")
+            print("\n")
+            time.sleep(30)
+    
+        else:
+            print("Length of Tweet is more than 260 characters")
+            print("\n")
 
     except Exception as e:
         print(e)
         time.sleep(60)
-        continue
-
