@@ -20,7 +20,7 @@ def OAuth():
 auth = OAuth()
 api = tweepy.API(auth)
 
-userID = 'trendimemes' # Change 'trendimemes' to any other twitter username
+userID = 'warikoo' # Change 'warikoo' to any other twitter username
 
 while True:
     tweets = api.user_timeline(screen_name=userID, count=10, include_rts = False, exclude_replies = True, tweet_mode = 'extended')
